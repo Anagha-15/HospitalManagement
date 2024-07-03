@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+{%block title%}Bookings{%endblock%}
+
+{% block content %} 
+<h2 class="text-center">Booking Page</h2>
+<hr>
+<div class="container w-50 p-3 text-center my-3 bg-info">
+<form action="" method="post"> {% csrf_token %}
+    {{formkey|crispy}}
+    <button type="submit" class="btn btn-primary mb-4 mt-4">Book Now</button>
+</form>
+</div>
+{%endblock%}
+
+
